@@ -1,5 +1,3 @@
-console.log("Hola Mundo");
-
 const API_KEY = '520844d9e3acacbc7823f7a0f624b0f9';
 
 const fetchData = position =>{
@@ -17,15 +15,21 @@ const setWeatherData = data =>{
     const weatherData = {
         location: data.name,
         description: data.weather[0].description,
-        humidity: data.main.humidity,
-        pressure: data.main.pressure,
-        temperature: data.main.temp,
+        humidity: "Humidity: "+ data.main.humidity+"%",
+        pressure: "Pressure:"+data.main.pressure,
+        temperature: data.main.temp + " °C",
         date: getDate()
     }
-
+    
     Object.keys(weatherData).forEach( key=> {
         document.getElementById(key).textContent = weatherData[key];
     });
+
+    switch(data.weather[0].main){
+        case 'Clear': 
+        animIcon.src = 'animated/day.svg'
+        break;
+    }
                                                  
 }
 
