@@ -15,10 +15,9 @@ const setWeatherData = data =>{
     const weatherData = {
         location: data.name,
         description: data.weather[0].description,
-        humidity: "Humidity: "+ data.main.humidity+"%",
-        pressure: "Pressure:"+data.main.pressure,
+        humidity: data.main.humidity+"%",
+        // pressure: "Pressure:"+data.main.pressure,
         temperature: data.main.temp + " °C",
-        date: getDate()
     }
     
     Object.keys(weatherData).forEach( key=> {
