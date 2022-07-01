@@ -29,6 +29,9 @@ const setWeatherData = data =>{
         case 'Clear': 
         animIcon.src = 'animated/day.svg'
         break;
+        case 'Clouds':
+            animIcon.src = 'animated/cloudy.svg'
+        break;
     }
                                                  
 }

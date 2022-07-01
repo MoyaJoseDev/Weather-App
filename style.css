@@ -30,7 +30,6 @@ body {
     align-items: center;
     padding-top: 20%;
     width: 200px;
-    height: 200px;
     border-radius: 10px;
 }
 
@@ -87,7 +86,6 @@ body {
     }
     #box1,#box2,#box3,#box4{
         width: 150px;
-        height: 150px;
         padding-top: 10%;
     }
     #box2{
